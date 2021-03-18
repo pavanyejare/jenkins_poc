@@ -6,7 +6,7 @@ pipeline {
 	stage('Code'){
 		steps{
 			sh 'rm -rf $WORKSPACE/*'
-		        checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/pavanyejare/jenkins_poc.git']],
+		        checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/pavanyejare/jenkins_poc.git']], ])
 		}
 	}
         stage('Build') {
